@@ -19,5 +19,8 @@ Copy the files in this repo into the default sketchbook and run using the Proces
 
 The gif below shows the classic Game of Life machine 'Gospers Glider Gun'
 
-![alt tag](http://i.imgur.com/3KTnnXO.gif)
+![](glider_gun.gif)
 
+The gif below shows a Game of Life machine exhibiting infinite growth (only a few generations)
+
+![](inifite_growth.gif)
