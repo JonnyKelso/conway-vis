@@ -15,7 +15,7 @@ Copy the files in this repo into the default sketchbook and run using the Proces
 2. Speed up / slow down generations
 3. Load classic game of life machines
 
-# current screenshot
+# current screenshots
 
 The gif below shows the classic Game of Life machine 'Gospers Glider Gun'
 
