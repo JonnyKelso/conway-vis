@@ -1,5 +1,5 @@
-int rows = 50;
-int cols = 50;
+int rows = 500;
+int cols = 500;
 int edge_size = 10;
 boolean[][] state;
 boolean[][] new_state;
@@ -7,7 +7,7 @@ boolean paused = false;
 
 void setup()
 {
-  size(500, 500); // window size
+  size(1000, 1000); // window size
   frameRate(60);
   stroke(255, 255, 255);  // colour of grid
   state = new boolean[cols][rows];  // array of current grid
@@ -56,14 +56,15 @@ void draw()
       }
     }
 
+    state = new_state;
     // copy next gen state to current state
-    for (int x = 0; x < cols; x++)
+    /*for (int x = 0; x < cols; x++)
     {
       for (int y = 0; y < rows; y++)
       {
         state[x][y] = new_state[x][y];
       }
-    }
+    }*/
   }
   // draw elements that make up the user interface
   // (text on screen, boxes etc)
@@ -76,7 +77,8 @@ void setInitialState()
 {
   // A range of classic GOL machines, taken from https://en.wikipedia.org/wiki/Conway's_Game_of_Life
 
-  // this is an initial state that shows a simple 'blinker' //<>//
+  // this is an initial state that shows a simple 'blinker'  //<>//
+  // (just a 1x3 horizontal line that changes into a 1x3 vertical line)
   //blinker();
 
   // this is an initial state that exhibits infinite growth
@@ -147,27 +149,25 @@ void blinker()
 // this is an initial state that exhibits infinite growth
 void infinite_growth()
 {
-
+  int xoff = 10;
+  int yoff = 50;
   for (int x = 0; x < cols; x++)
   {
-    if (x >= 40 && x <= 47)
+    if (x >= 5 && x <= 12)
     {
-      state[x][40] = true;
-    } else if (x >= 49 && x <= 53)
+      state[x + xoff][yoff] = true;
+    } else if (x >= 14 && x <= 18)
     {
-      state[x][40] = true;
-    } else if (x >= 57 && x <= 59)
+      state[x + xoff][yoff] = true;
+    } else if (x >= 22 && x <= 24)
     {
-      state[x][40] = true;
-    } else if (x >= 66 && x <= 72)
+      state[x + xoff][yoff] = true;
+    } else if (x >= 31 && x <= 37)
     {
-      state[x][40] = true;
-    } else if (x >= 74 && x <= 78)
+      state[x + xoff][yoff] = true;
+    } else if (x >= 39 && x <= 43)
     {
-      state[x][40] = true;
-    } else
-    {
-      state[x][40] = false;
+      state[x + xoff][yoff] = true;
     }
   }
 }
