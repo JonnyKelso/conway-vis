@@ -16,5 +16,8 @@ Copy the files in this repo into the default sketchbook and run using the Proces
 3. Load classic game of life machines
 
 # current screenshot
+
+The gif below shows the classic Game of Life machine 'Gospers Glider Gun'
+
 ![alt tag](http://i.imgur.com/3KTnnXO.gif)
 
